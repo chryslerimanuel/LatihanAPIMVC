@@ -54,7 +54,6 @@ namespace api.Repositories
         public IEnumerable<Customer> GetAll()
         {
             var SP_Name = "SP_RetrieveCustomer";
-
             var GetAll = connection.Query<Customer>(SP_Name, commandType: CommandType.StoredProcedure);
 
             return GetAll;
